@@ -39,8 +39,11 @@ jobs:
     name: <name_of_test>
     runs-on: ubuntu-latest
 
-  steps:
-    # TODO
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      # TODO: Add steps to install dependencies and run tests
 ```
 4. Replace `<name_of_test>` with a name related to the type of test suite you are running. For example, this repo uses `pytest` so `<name_of_test>=pytest`.
 5. Research the steps needed to execute your testing workflow using Github actions. Googling "Github actions for <your-project-language-or-testing-framework> testing" is a good place to start. Paste the necessary steps into the `# TODO` block above. This repo contains an example for Python with `pytest`.
