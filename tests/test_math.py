@@ -3,6 +3,13 @@ import random
 import pytest
 
 
+def test_subtract():
+    from se_demo.math import subtract
+
+    assert subtract(5.9, 3.7) == 2.2
+    assert subtract(2.2, 0.0) == 2.2
+
+
 def test_add():
     assert add(2.2, 3.7) == 5.9
     assert add(2.2, 0.0) == 2.2
