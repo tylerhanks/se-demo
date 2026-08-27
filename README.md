@@ -47,7 +47,7 @@ jobs:
 ```
 4. Replace `<name_of_test>` with a name related to the type of test suite you are running. For example, this repo uses `pytest` so `<name_of_test>=pytest`.
 5. Research the steps needed to execute your testing workflow using Github actions. Googling "Github actions for <your-project-language-or-testing-framework> testing" is a good place to start. Paste the necessary steps into the `# TODO` block above. This repo contains an example for Python with `pytest`.
-6. Test if CI is working by pushing a new branch and seeing if your tests run.
+6. Push a new branch, open a pull request targeting main, and verify that the CI job runs on the PR.
 
 ## How to require passing tests before merge
 
