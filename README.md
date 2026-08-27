@@ -1,4 +1,7 @@
 # se-demo
+
+[![CI](https://github.com/tylerhanks/se-demo/actions/workflows/ci.yaml/badge.svg)](https://github.com/tylerhanks/se-demo/actions/workflows/ci.yaml)
+
 A demo repo for CSE2410 (Intro to Software Engineering) projects at Florida Tech. This README covers how to set up a new repo with best practices for your group projects.
 
 ## How to set up project board
