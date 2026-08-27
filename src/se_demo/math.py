@@ -7,4 +7,4 @@ def add(a: float, b: float) -> float:
 
 
 def subtract(a: float, b: float) -> float:
-    return a / b
+    return a - b
