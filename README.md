@@ -14,11 +14,15 @@ A demo repo for CSE2410 (Intro to Software Engineering) projects at Florida Tech
 
 ## How to set up branch protection
 
-1. From the top bar of the Github repo, navigate to Settings -> Branches
-2. Click "Add classic branch protection rule"
-3. Set the branch name pattern to `main`
-4. Check "Require a pull request before merging"
-5. If you are still setting up the repo, I recommend not setting an approval requirement. After the repo is set up and your team is ready to start developing, edit the rule to set the required approvals to at least 1.
+1. From the repository, navigate to Settings -> Branches.
+2. Click "Add classic branch protection rule."
+3. Set the branch name pattern to `main`.
+4. Check "Require a pull request before merging."
+5. While initially setting up the repository, you may leave the required
+   number of approvals at 0.
+6. Once setup is complete and normal development begins:
+   - require at least 1 approval;
+   - check "Do not allow bypassing the above settings."
 
 ## How to set up Automated Testing/Continuous Integration
 
@@ -51,9 +55,13 @@ jobs:
 
 ## How to require passing tests before merge
 
-1. Ensure your automated CI tests are working and you have set up branch protection
-2. Navigate back to your branch protection rule, click the three dots, and click edit
-3. Check "Require status checks to pass before merging"
-4. Search `<name_of_test>` from step 4. above in the search bar and select the result
-5. Click "save changes" at the bottom of the page
-6. Now verify by opening a PR with failing tests; you should not be allowed to merge until the tests pass
+1. First verify that your CI workflow runs successfully on a pull request.
+2. Navigate back to the branch protection rule and edit it.
+3. Check "Require status checks to pass before merging."
+4. Search for the name of your CI job, e.g. `pytest`, and select it.
+   Use the job's `name:` value, i.e. `<name_of_test>` from step 4 above, not the workflow name `CI`.
+5. Save changes.
+6. Open a PR with a failing test and verify that GitHub prevents the PR
+   from being merged.
+7. Fix the test/code, push the change, and verify that the passing CI
+   check allows the PR to be merged.
