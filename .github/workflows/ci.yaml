@@ -1,4 +1,4 @@
-name: Tests
+name: CI
 
 on:
   push:
@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v7
+      - name: Checkout repository
+        uses: actions/checkout@v7
 
       - name: Install the latest version of uv
         uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d
