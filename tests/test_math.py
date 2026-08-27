@@ -1,6 +1,11 @@
-from se_demo.math import times
+from se_demo.math import add, times
 import random
 import pytest
+
+
+def test_add():
+    assert add(2.2, 3.7) == 5.9
+    assert add(2.2, 0.0) == 2.2
 
 
 def test_times():
